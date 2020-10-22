@@ -1,0 +1,5 @@
+repos:
+- repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
+  sha: master
+  hooks:
+  - id: dockerfilelint
