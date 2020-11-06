@@ -57,3 +57,7 @@ RUN curl -Lo /usr/local/bin/terraform-docs "https://github.com/terraform-docs/te
 # Install minio mc client
 RUN wget https://dl.min.io/client/mc/release/linux-amd64/mc -O /usr/local/bin/mc && \
   chmod +x /usr/local/bin/mc
+
+RUN useradd --user-group --create-home --no-log-init --shell /bin/bash build-tools
+WORKDIR /home/build-tools
+USER build-tools
