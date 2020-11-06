@@ -50,5 +50,10 @@ RUN curl -L "$(curl -Ls https://api.github.com/repos/terraform-linters/tflint/re
     rm tflint.zip && \
     mv tflint /usr/local/bin
 
+# Install tfdocs
 RUN curl -Lo /usr/local/bin/terraform-docs "https://github.com/terraform-docs/terraform-docs/releases/download/v${TERRAFORM_DOCS_VERSION}/terraform-docs-v0.10.1-$(uname | tr '[:upper:]' '[:lower:]')-amd64" && \
     chmod +x /usr/local/bin/terraform-docs
+
+# Install minio mc client
+RUN wget https://dl.min.io/client/mc/release/linux-amd64/mc -O /usr/local/bin/mc && \
+  chmod +x /usr/local/bin/mc
