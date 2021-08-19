@@ -1,6 +1,6 @@
 FROM debian:stable-slim
 
-ENV VAULT_VERSION 1.5.4
+ENV VAULT_VERSION 1.8.1
 ENV VAULT_ZIP vault_${VAULT_VERSION}_linux_amd64.zip
 ENV VAULT_URL https://releases.hashicorp.com/vault/$VAULT_VERSION/$VAULT_ZIP
 ENV TERRAFORM_VERSION 0.13.4
